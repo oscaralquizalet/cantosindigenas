@@ -63,6 +63,7 @@
 .cp a.leaflet-popup-close-button{color:#fff;top:6px;right:6px;z-index:5;text-shadow:0 1px 4px #000;font-size:22px}
 .pv{position:relative;aspect-ratio:16/9;background:#000;cursor:pointer;overflow:hidden}
 .pv.playing{cursor:default}
+.pv.playing img,.pv.playing .pbtn,.pv.playing .pdur{display:none}
 .pv img,.pv iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
 .pv .pbtn{position:absolute;inset:0;margin:auto;width:62px;height:62px;border-radius:50%;background:rgba(200,85,61,.95);color:#fff;display:grid;place-content:center;font-size:1.6rem;padding-left:.15em;box-shadow:0 4px 14px rgba(0,0,0,.5);transition:transform .15s}
 .pv:hover .pbtn{transform:scale(1.12)}

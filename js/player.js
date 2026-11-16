@@ -44,7 +44,7 @@ Cantos.player = (function () {
     if (!v) return;
     pv.classList.add('playing');
     pv.removeAttribute('role');
-    pv.innerHTML = embed(v, true);
+    pv.insertAdjacentHTML('beforeend', embed(v, true));
   }
 
   /* Los clics se escuchan en el documento (fase de captura) porque Leaflet
@@ -56,12 +56,16 @@ Cantos.player = (function () {
     const ampliar = t.closest('[data-expand]');
     if (ampliar) {
       const v = buscar(ampliar.dataset.expand);
+            e.stopPropagation();                          /* que Leaflet no lo tome como clic en el mapa */
       if (Cantos.mapa) Cantos.mapa.cerrarPopup();   /* evita que suenen dos videos a la vez */
       if (v) openModal(v);
       return;
     }
-    const pv = t.closest('.cp .pv');
-    if (pv && !pv.classList.contains('playing')) reproducirEnPopup(pv);
+        const pv = t.closest('.cp .pv');
+    if (pv) {
+      e.stopPropagation();   /* si el clic llega al mapa, Leaflet cierra el popup */
+      if (!pv.classList.contains('playing')) reproducirEnPopup(pv);
+    }
   }, true);
 
   document.addEventListener('keydown', e => {
