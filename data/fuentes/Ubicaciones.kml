@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="ubicaciones" id="ubicaciones">
+	<SimpleField name="id" type="float"></SimpleField>
+	<SimpleField name="Codigo" type="string"></SimpleField>
+</Schema>
+<Folder><name>ubicaciones</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">57</SimpleData>
+		<SimpleData name="Codigo">57</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-66.6244352978716,-15.5550580743758</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">1</SimpleData>
+		<SimpleData name="Codigo">01</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-67.1086726993709,-17.9519883192979</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">2</SimpleData>
+		<SimpleData name="Codigo">02</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-67.4271242335329,-15.5135678005083</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">3</SimpleData>
+		<SimpleData name="Codigo">03</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>15.2159538251978,2.04278136018984</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">4</SimpleData>
+		<SimpleData name="Codigo">04</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-95.5055500634316,65.6256227426271</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">5</SimpleData>
+		<SimpleData name="Codigo">05</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-65.4225623902249,4.4836971964855</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">6</SimpleData>
+		<SimpleData name="Codigo">06</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>25.4920011165968,-24.4028632185622</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">7</SimpleData>
+		<SimpleData name="Codigo">07</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-62.0263216301447,-16.1307656128819</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">8</SimpleData>
+		<SimpleData name="Codigo">08</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-51.7344512325844,64.1770161056886</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">9</SimpleData>
+		<SimpleData name="Codigo">09</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-53.664176932127,66.937486559786</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">10</SimpleData>
+		<SimpleData name="Codigo">10</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-38.1884916907866,-4.05817296508027</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">11</SimpleData>
+		<SimpleData name="Codigo">11</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-69.9167911817311,-4.21786849592906</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">12</SimpleData>
+		<SimpleData name="Codigo">12</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-51.9880012528477,-6.65847942441592</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">13</SimpleData>
+		<SimpleData name="Codigo">13</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-62.7194837385886,-17.6604578317019</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">14</SimpleData>
+		<SimpleData name="Codigo">14</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-77.4596927760277,-2.34024798696804</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">15</SimpleData>
+		<SimpleData name="Codigo">15</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-74.308647842562,-11.1414338556206</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">16</SimpleData>
+		<SimpleData name="Codigo">16</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-53.2351151577951,-11.22967049313</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">17</SimpleData>
+		<SimpleData name="Codigo">17</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-62.8924832179577,1.00385560833642</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">18</SimpleData>
+		<SimpleData name="Codigo">18</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-62.4973237915037,-22.7361970563131</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">19</SimpleData>
+		<SimpleData name="Codigo">19</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-72.002256464607,-9.17105990539042</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">20</SimpleData>
+		<SimpleData name="Codigo">20</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-74.5936580446167,-8.19195568850894</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">21</SimpleData>
+		<SimpleData name="Codigo">21</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-74.7414031120743,-7.90701877269792</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">22</SimpleData>
+		<SimpleData name="Codigo">22</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-71.9442137595344,-9.06259626459816</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">23</SimpleData>
+		<SimpleData name="Codigo">23</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-69.5649392121418,-10.949524665506</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">24</SimpleData>
+		<SimpleData name="Codigo">24</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-76.0412445748525,8.18199584537298</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">25</SimpleData>
+		<SimpleData name="Codigo">25</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-74.489628221573,-8.31649649903013</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">26</SimpleData>
+		<SimpleData name="Codigo">26</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-59.9080108694418,-22.1101401580544</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">27</SimpleData>
+		<SimpleData name="Codigo">27</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-76.1552413270501,-1.29354904397511</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">28</SimpleData>
+		<SimpleData name="Codigo">28</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-67.3292324163113,5.5445338611485</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">29</SimpleData>
+		<SimpleData name="Codigo">29</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-60.0111612575601,-21.7378826827812</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">30</SimpleData>
+		<SimpleData name="Codigo">30</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.6785746040149,67.8717752940224</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">31</SimpleData>
+		<SimpleData name="Codigo">31</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-77.9943862343673,-1.60381523599648</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">32</SimpleData>
+		<SimpleData name="Codigo">32</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-77.274390833773,60.0446443530319</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">33</SimpleData>
+		<SimpleData name="Codigo">33</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-59.0839583695969,-21.8016002583442</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">34</SimpleData>
+		<SimpleData name="Codigo">34</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-72.8398208948989,-38.5959485543897</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">35</SimpleData>
+		<SimpleData name="Codigo">35</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-69.0447712464458,-15.475865230394</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">36</SimpleData>
+		<SimpleData name="Codigo">36</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>128.504991075906,1.35761989734686</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">37</SimpleData>
+		<SimpleData name="Codigo">37</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>2.61745824481924,6.47836856817864</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">38</SimpleData>
+		<SimpleData name="Codigo">38</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-61.9806954280439,-17.634078044491</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">39</SimpleData>
+		<SimpleData name="Codigo">39</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-63.1408578826114,-17.7485532771997</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">40</SimpleData>
+		<SimpleData name="Codigo">40</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-63.1863544494571,-17.7779059009712</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">41</SimpleData>
+		<SimpleData name="Codigo">41</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-76.248272027762,-0.870794608603548</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">42</SimpleData>
+		<SimpleData name="Codigo">42</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-59.4086717700688,-21.81242403836</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">43</SimpleData>
+		<SimpleData name="Codigo">43</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-75.0125265669831,-7.33057328511016</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">44</SimpleData>
+		<SimpleData name="Codigo">44</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-74.5878307917896,-8.43423193891754</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">45</SimpleData>
+		<SimpleData name="Codigo">45</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-69.4046275343624,-10.9343187369154</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">46</SimpleData>
+		<SimpleData name="Codigo">46</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-65.7573805768565,-16.7748029153219</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">47</SimpleData>
+		<SimpleData name="Codigo">47</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-65.7008767760964,66.1404887143785</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">48</SimpleData>
+		<SimpleData name="Codigo">48</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-92.0942974366724,62.8134605368296</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">49</SimpleData>
+		<SimpleData name="Codigo">49</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-94.0581714208835,61.1091738190977</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">50</SimpleData>
+		<SimpleData name="Codigo">50</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-97.6974897302106,67.4833769848586</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">51</SimpleData>
+		<SimpleData name="Codigo">51</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.7742921036656,67.6638956210535</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">52</SimpleData>
+		<SimpleData name="Codigo">52</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-77.2768693723573,60.0083644336414</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">53</SimpleData>
+		<SimpleData name="Codigo">53</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-63.5507110907717,2.35169351134485</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">54</SimpleData>
+		<SimpleData name="Codigo">54</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-109.085803255343,26.3198536328352</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">55</SimpleData>
+		<SimpleData name="Codigo">55</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>17.8375102873325,3.74305374158974</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#ubicaciones">
+		<SimpleData name="id">56</SimpleData>
+		<SimpleData name="Codigo">56</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-64.4488325829682,-14.8325478265871</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geoportal Cantos · Música y voces de los pueblos indígenas</title>
+<meta name="description" content="Geoportal interactivo con cantos, ritmos y voces de pueblos indígenas del mundo: escucha los videos directamente sobre el mapa.">
+<meta name="theme-color" content="#1d4d3f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%B6%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;700;800&display=swap">
+
+<!-- Estilos propios -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/portada.css">
+<link rel="stylesheet" href="css/geoportal.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="Geoportal Cantos, inicio">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#f2a541"/><path d="M10 26h3v-4h3v10h3V14h3v20h3V18h3v14h3V22h3v4h3" fill="none" stroke="#13342b" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Geoportal Cantos<small>música y voces ancestrales</small></span>
+    </a>
+    <button id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main" id="mainNav" aria-label="Principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#sobre">Sobre el proyecto</a>
+      <a href="#geoportal">Geoportal</a>
+      <a href="#creditos">Créditos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ===== INICIO ===== -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <span class="kicker">Geoportal · música indígena</span>
+    <h1>Escucha la <em>Tierra</em> cantar</h1>
+    <p class="lead">Un mapa vivo con cantos, ritmos y voces de pueblos indígenas del mundo. Elige un punto, mira el video y viaja por los sonidos de la Amazonía, el Chaco, los Andes, el Ártico y más.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#geoportal">🗺️ Explorar el mapa</a>
+      <a class="btn btn-ghost" href="#sobre">Conocer el proyecto</a>
+    </div>
+    <div class="eq" id="eq" aria-hidden="true"></div>
+  </div>
+  <div class="wrap"><div class="stats" id="stats">
+    <div class="stat"><b data-s="videos">–</b><span>videos en el mapa</span></div>
+    <div class="stat"><b data-s="pueblos">–</b><span>pueblos indígenas</span></div>
+    <div class="stat"><b data-s="paises">–</b><span>países y territorios</span></div>
+    <div class="stat"><b data-s="horas">–</b><span>horas de música</span></div>
+  </div></div>
+</section>
+<div class="zig terra"></div>
+
+<!-- ===== SOBRE EL PROYECTO ===== -->
+<section class="block" id="sobre">
+  <div class="wrap">
+    <div class="eyebrow">Sobre el proyecto</div>
+    <h2 class="title">Un archivo sonoro para escuchar, descubrir y cuidar</h2>
+    <p class="sub">Este geoportal reúne videos de música y cantos de pueblos indígenas y los ubica en el territorio donde fueron grabados o de donde provienen. Es una primera versión: iremos sumando más pueblos, historias y herramientas.</p>
+    <div class="cards">
+      <article class="card" style="--c:var(--terra)"><div class="ico">🎶</div><h3>Escucha</h3><p>Haz clic en la miniatura de cualquier punto y reproduce el video ahí mismo, sin salir del mapa.</p></article>
+      <article class="card" style="--c:var(--teal)"><div class="ico">🧭</div><h3>Explora</h3><p>Busca por pueblo, país o título y filtra por región para descubrir cantos de distintos territorios.</p></article>
+      <article class="card" style="--c:var(--ochre)"><div class="ico">🌱</div><h3>Respeta</h3><p>Muchos cantos son rituales o sagrados. Se comparten desde canales públicos, con crédito a sus autores y comunidades.</p></article>
+    </div>
+    <!-- Aquí se podrán agregar más bloques: metodología, dashboard, video tutorial, etc. -->
+  </div>
+</section>
+
+<!-- ===== GEOPORTAL ===== -->
+<section class="block" id="geoportal">
+  <div class="wrap">
+    <div class="eyebrow">Geoportal</div>
+    <h2 class="title">Explora el mapa sonoro</h2>
+    <p class="sub">Cada círculo con miniatura es un video. Los círculos con número agrupan varios videos cercanos: haz clic para acercarte.</p>
+
+    <div class="gp" id="gp">
+      <aside class="panel" id="panel">
+        <div class="phead"><span>🎧 Buscar y filtrar</span><button id="togglePanel" aria-expanded="true">Ocultar</button></div>
+        <div class="pbody">
+          <div class="filters">
+            <div class="full"><label for="q">Buscar</label><input id="q" type="search" placeholder="Pueblo, país, título o canal…" autocomplete="off"></div>
+            <div><label for="fRegion">Región</label><select id="fRegion"></select></div>
+            <div><label for="fPais">País</label><select id="fPais"></select></div>
+            <div class="full"><label for="fPueblo">Pueblo indígena</label><select id="fPueblo"></select></div>
+            <div class="full row">
+              <label class="chk"><input type="checkbox" id="showLabels"> Mostrar títulos en el mapa</label>
+              <button class="linkbtn" id="reset">Limpiar filtros</button>
+            </div>
+          </div>
+          <div class="count" id="count" aria-live="polite"></div>
+          <ul id="list"></ul>
+        </div>
+      </aside>
+
+      <div class="mapwrap">
+        <div id="map" aria-label="Mapa interactivo de videos de música indígena"></div>
+        <div class="mtools">
+          <div class="tgroup" id="baseSwitch" role="group" aria-label="Mapa base">
+            <button data-b="calles" class="on">Calles</button><button data-b="satelite">Satélite</button><button data-b="claro">Claro</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="zig forest"></div>
+</main>
+
+<!-- ===== CRÉDITOS ===== -->
+<footer id="creditos">
+  <div class="wrap">
+    <div class="cols">
+      <div><h3>Geoportal Cantos</h3><p>Música y voces de los pueblos indígenas, georreferenciadas. Proyecto en construcción.</p></div>
+      <div><h3>Créditos</h3><p>Concepto y desarrollo: <em>por completar</em>.</p><p>Institución / organización: <em>por completar</em>.</p></div>
+      <div><h3>Respeto y derechos</h3><p>Los videos pertenecen a sus autores, comunidades y canales de origen; este geoportal solo los enlaza y reproduce desde YouTube. Si deseas corregir o retirar un material, escríbenos: <em>contacto por completar</em>.</p></div>
+    </div>
+    <div class="small">Mapas: © colaboradores de OpenStreetMap, Esri, CARTO · Motor cartográfico: Leaflet · Versión 0.2</div>
+  </div>
+</footer>
+
+<!-- Reproductor ampliado -->
+<div id="modal" role="dialog" aria-modal="true" aria-label="Reproductor de video">
+  <div class="mbox">
+    <div class="mplayer" id="mPlayer"><button class="mclose" id="mClose" aria-label="Cerrar">✕</button></div>
+    <div class="mfoot"><b id="mTitle"></b><a class="btn btn-primary" id="mYt" target="_blank" rel="noopener">Ver en YouTube ↗</a></div>
+  </div>
+</div>
+
+<noscript><p style="padding:1rem;text-align:center">Este geoportal necesita JavaScript para mostrar el mapa.</p></noscript>
+
+<!-- Scripts (el orden importa) -->
+<script src="data/videos.js"></script>
+<script src="js/config.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/datos.js"></script>
+<script src="js/player.js"></script>
+<script src="js/filtros.js"></script>
+<script src="js/mapa.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

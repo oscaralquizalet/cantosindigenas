@@ -1,0 +1,51 @@
+/* ===== Base: variables, tipografía, botones, cabecera y pie ===== */
+:root{
+  --forest:#1d4d3f; --forest-d:#13342b; --terra:#c8553d; --ochre:#f2a541; --teal:#2a9d8f;
+  --plum:#7b2d5b; --sky:#4a90c2; --cream:#fff6e5; --sand:#f4e4c1; --ink:#2b2118; --muted:#6d5f50;
+  --radius:18px; --shadow:0 10px 30px rgba(43,33,24,.14);
+  --font-body:"Nunito","Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+  --font-head:"Fraunces",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:var(--font-body);color:var(--ink);background:var(--cream);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:var(--terra)}
+h1,h2,h3{font-family:var(--font-head);line-height:1.12;margin:0 0 .5em}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+
+/* Franja decorativa en zigzag */
+.zig{height:12px;background:linear-gradient(135deg,var(--c,var(--ochre)) 25%,transparent 25%) -8px 0/16px 12px,linear-gradient(225deg,var(--c,var(--ochre)) 25%,transparent 25%) -8px 0/16px 12px}
+.zig.terra{--c:var(--terra)} .zig.forest{--c:var(--forest)}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:.5em;border:0;border-radius:999px;padding:.8em 1.4em;font:800 1rem var(--font-body);cursor:pointer;text-decoration:none;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.2)}
+.btn-primary{background:var(--ochre);color:var(--ink)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:2px solid rgba(255,255,255,.5)}
+
+/* Cabecera */
+header.top{position:sticky;top:0;z-index:2000;background:var(--forest);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.top .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:64px}
+.brand{display:flex;align-items:center;gap:.7rem;color:#fff;text-decoration:none;font:800 1.25rem var(--font-head)}
+.brand svg{width:40px;height:40px}
+.brand small{display:block;font:600 .68rem var(--font-body);letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+nav.main{display:flex;gap:.3rem}
+nav.main a{color:#fff;text-decoration:none;font-weight:700;padding:.5em .9em;border-radius:999px}
+nav.main a:hover{background:rgba(255,255,255,.15)}
+#menuBtn{display:none;background:none;border:2px solid rgba(255,255,255,.5);color:#fff;border-radius:10px;font-size:1.3rem;padding:.2em .6em;cursor:pointer}
+
+/* Pie */
+footer{background:var(--forest-d);color:#e9dfc9;padding:2.4rem 0 1.6rem}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.6rem}
+footer h3{color:var(--ochre);font-size:1.15rem}
+footer p{margin:0 0 .6rem;font-size:.92rem}
+footer .small{border-top:1px solid rgba(255,255,255,.15);margin-top:1.6rem;padding-top:1rem;font-size:.82rem;opacity:.8}
+
+@media (max-width:900px){
+  nav.main{display:none;position:absolute;top:64px;left:0;right:0;background:var(--forest);flex-direction:column;padding:.6rem 4vw 1rem}
+  nav.main.open{display:flex}
+  #menuBtn{display:block}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
