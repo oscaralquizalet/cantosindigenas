@@ -71,7 +71,7 @@
 .pb{padding:.8rem 1rem 1rem;font-family:var(--font-body)}
 .chip{display:inline-flex;align-items:center;gap:.4em;font:800 .68rem var(--font-body);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .chip i{width:.8em;height:.8em;border-radius:50%;background:var(--c)}
-.pb h3{font:800 1.02rem/1.25 var(--font-head);margin:.25rem 0 .3rem;color:var(--forest)}
+.pb h3{font:800 1.02rem/1.25 var(--font-head);margin:.25rem 0 .75rem;color:var(--forest)}
 .pb p{margin:0 0 .6rem;font-size:.82rem;color:var(--muted)}
 .pa{display:flex;gap:.5rem;flex-wrap:wrap}
 .pa button,.pa a{border:0;border-radius:999px;padding:.4em .9em;font:800 .78rem var(--font-body);cursor:pointer;text-decoration:none}

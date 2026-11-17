@@ -44,7 +44,6 @@ Cantos.mapa = (function () {
       <div class="pb">
         <span class="chip"><i style="--c:${Cantos.colorDe(v)}"></i>${esc(v.pueblo)} · ${esc(v.pais)}</span>
         <h3>${esc(v.titulo)}</h3>
-        <p>${esc(v.canal)}</p>
         <div class="pa"><button type="button" data-expand="${v.n}">⛶ Ampliar</button><a href="${esc(v.url)}" target="_blank" rel="noopener">Ver en YouTube ↗</a></div>
       </div></div>`;
   }

@@ -11,7 +11,7 @@
     v.url = v.short
       ? `https://www.youtube.com/shorts/${v.id}`
       : `https://www.youtube.com/watch?v=${v.id}` + (v.inicio ? `&t=${v.inicio}s` : '');
-    v.hay = norm([v.titulo, v.canal, v.pais, v.pueblo, v.region].join(' '));
+    v.hay = norm([v.titulo, v.pais, v.pueblo, v.region].join(' '));
   });
 
   Cantos.videos = VIDEOS;
