@@ -1,43 +1,59 @@
 /* ============================================================
    filtros.js · Búsqueda, filtros y lista lateral de videos
+   Filtros: Buscar · Macrorregión · Área ecocultural · País · Pueblo
+   Los desplegables se llenan solos con los datos de data/videos.js y
+   funcionan en cascada: al elegir una macrorregión, los de abajo (área,
+   país y pueblo) solo muestran lo que existe en ella.
    ============================================================ */
 Cantos.filtros = (function () {
   const { $, esc, norm, fmt, plural } = Cantos.utils;
   const VIDEOS = Cantos.videos;
 
-  const state = { q: '', region: '', pais: '', pueblo: '', labels: false, filtered: VIDEOS.slice() };
+  /* Orden en que aparecen las macrorregiones (las nuevas van al final) */
+  const ORDEN_MACRO = ['América del Sur', 'Mesoamérica y Norteamérica', 'Ártico', 'África', 'Asia y Oceanía'];
 
-  /* ---------- Listas desplegables ---------- */
-  function llenar(selector, clave, orden) {
-    const cuenta = {};
-    VIDEOS.forEach(v => { cuenta[v[clave]] = (cuenta[v[clave]] || 0) + 1; });
-    const claves = (orden || Object.keys(cuenta).sort((a, b) => a.localeCompare(b, 'es'))).filter(k => cuenta[k]);
-    const el = $(selector);
-    el.innerHTML = '<option value="">' + (clave === 'region' ? 'Todas' : 'Todos') + '</option>' +
-      claves.map(k => `<option value="${esc(k)}">${esc(k)} (${cuenta[k]})</option>`).join('');
-  }
-  llenar('#fRegion', 'region', Cantos.config.REGIONS.map(r => r[0]));
-  llenar('#fPais', 'pais');
-  llenar('#fPueblo', 'pueblo');
+  /* Filtros desplegables, en el orden del panel */
+  const FILTROS = [
+    { sel: '#fMacro',  clave: 'macro',  todos: 'Todas', orden: ORDEN_MACRO },
+    { sel: '#fArea',   clave: 'area',   todos: 'Todas' },
+    { sel: '#fPais',   clave: 'pais',   todos: 'Todos' },
+    { sel: '#fPueblo', clave: 'pueblo', todos: 'Todos' }
+  ];
 
-  /* ---------- Filtrado ---------- */
-  function cumple(v) {
-    const s = state;
-    if (s.q && !s.q.split(/\s+/).every(t => v.hay.includes(t))) return false;
-    if (s.region && v.region !== s.region) return false;
-    if (s.pais && v.pais !== s.pais) return false;
-    if (s.pueblo && v.pueblo !== s.pueblo) return false;
-    return true;
+  const state = { q: '', macro: '', area: '', pais: '', pueblo: '', labels: false, filtered: VIDEOS.slice() };
+
+  /* ¿El video cumple la búsqueda y los primeros "hasta" filtros del panel? */
+  function cumple(v, hasta) {
+    if (state.q && !state.q.split(/\s+/).every(t => v.hay.includes(t))) return false;
+    return FILTROS.slice(0, hasta).every(f => !state[f.clave] || v[f.clave] === state[f.clave]);
   }
+
+  /* Rellena cada desplegable con las opciones que existen (y su cantidad) según los
+     filtros que tiene ARRIBA: Macrorregión → Área → País → Pueblo.
+     Si una selección ya no corresponde, se limpia sola. */
+  function actualizarOpciones() {
+    FILTROS.forEach((f, i) => {
+      const cuenta = {};
+      VIDEOS.forEach(v => { if (cumple(v, i)) cuenta[v[f.clave]] = (cuenta[v[f.clave]] || 0) + 1; });
+      if (state[f.clave] && !cuenta[state[f.clave]]) state[f.clave] = '';
+      const pos = k => { const j = (f.orden || []).indexOf(k); return j < 0 ? 99 : j; };
+      const claves = Object.keys(cuenta).sort(f.orden ? (x, y) => pos(x) - pos(y) || x.localeCompare(y, 'es') : (x, y) => x.localeCompare(y, 'es'));
+      const el = $(f.sel);
+      el.innerHTML = `<option value="">${f.todos}</option>` + claves.map(k => `<option value="${esc(k)}">${esc(k)} (${cuenta[k]})</option>`).join('');
+      el.value = state[f.clave];
+    });
+  }
+
   function aplicar() {
-    state.filtered = VIDEOS.filter(cumple);
+    actualizarOpciones();
+    state.filtered = VIDEOS.filter(v => cumple(v, FILTROS.length));
     renderLista();
     if (Cantos.mapa && Cantos.mapa.listo()) Cantos.mapa.renderMarkers();
   }
+
   function limpiar() {
-    Object.assign(state, { q: '', region: '', pais: '', pueblo: '' });
+    Object.assign(state, { q: '', macro: '', area: '', pais: '', pueblo: '' });
     $('#q').value = '';
-    ['#fRegion', '#fPais', '#fPueblo'].forEach(s => { $(s).value = ''; });
     aplicar();
     if (Cantos.mapa) Cantos.mapa.cerrarPopup();
   }
@@ -56,8 +72,8 @@ Cantos.filtros = (function () {
   }
 
   /* ---------- Eventos ---------- */
-  [['#fRegion', 'region'], ['#fPais', 'pais'], ['#fPueblo', 'pueblo']].forEach(([sel, clave]) => {
-    $(sel).addEventListener('change', e => { state[clave] = e.target.value; aplicar(); });
+  FILTROS.forEach(f => {
+    $(f.sel).addEventListener('change', e => { state[f.clave] = e.target.value; aplicar(); });
   });
   let temporizador;
   $('#q').addEventListener('input', e => {
@@ -94,6 +110,8 @@ Cantos.filtros = (function () {
       Cantos.player.openModal(v);   /* sin mapa, se reproduce en la ventana */
     }
   });
+
+  actualizarOpciones();   /* llena los desplegables al cargar */
 
   return { state, aplicar, limpiar, renderLista };
 })();
