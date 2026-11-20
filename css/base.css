@@ -29,7 +29,7 @@ h1,h2,h3{font-family:var(--font-head);line-height:1.12;margin:0 0 .5em}
 header.top{position:sticky;top:0;z-index:2000;background:var(--forest);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.25)}
 .top .bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:64px}
 .brand{display:flex;align-items:center;gap:.7rem;color:#fff;text-decoration:none;font:800 1.25rem var(--font-head)}
-.brand svg{width:40px;height:40px}
+.brand svg,.brand img{width:40px;height:40px;object-fit:contain}
 .brand small{display:block;font:600 .68rem var(--font-body);letter-spacing:.14em;text-transform:uppercase;opacity:.75}
 nav.main{display:flex;gap:.3rem}
 nav.main a{color:#fff;text-decoration:none;font-weight:700;padding:.5em .9em;border-radius:999px}
