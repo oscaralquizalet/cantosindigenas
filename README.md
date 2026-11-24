@@ -1,4 +1,4 @@
-# Geoportal Cantos
+# Vox Terra
 
 Geoportal sobre **música indígena**: videos de YouTube ubicados en un mapa (Leaflet + HTML + CSS + JavaScript, sin servidor ni compilación).
 
